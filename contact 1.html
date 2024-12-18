@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up - The DRS Zone</title>
+<link rel="stylesheet" href="contact style.css">
+</head>
+<body>
+<header>
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="fixtures 1.html">Race Locations</a></li>
+<li><a href="contact 1.html">Newsletter Sign-Up</a></li>
+</ul>
+</nav>
+</header>
+<main>
+<h1>Sign Up for Our Newsletter</h1>
+<p>Stay updated with the latest news and updates from The DRS Zone.</p>
+<form id="signup-form">
+<div class="form-group">
+<label for="name">Name:</label>
+<input type="text" id="name" name="name" required>
+</div>
+<div class="form-group">
+<label for="email">Email Address:</label>
+<input type="email" id="email" name="email" required >
+</div>
+<div class="form-group">
+<label for="phone">Phone Number:</label>
+<input type="tel" id="phone" name="phone" required>
+</div>
+<div class="form-group">
+<label for="message">Message (Optional):</label>
+<textarea id="message" name="message" rows="5"></textarea>
+</div>
+<button type="submit">Sign Up</button>
+</form>
+</main>
+<footer>
+<p>&copy; 2024 The DRS Zone. All rights reserved.</p>
+</footer>
+<script>
+document.getElementById('signup-form').addEventListener('submit', function(event) {
+event.preventDefault();
+alert('Thank you for signing up! We’ll keep you updated.');
+this.reset();
+});
+</script>
+</body>
+</html>

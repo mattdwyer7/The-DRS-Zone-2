@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The DRS Zone - Home</title>
+<link rel="stylesheet" href="home style.css">
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+const driversStandings = [
+{ position: 1, driver: "Max Verstappen", team: "Red Bull Racing", points: 437 },
+{ position: 2, driver: "Lando Norris", team: "McLaren", points: 374 },
+{ position: 3, driver: "Charles Leclerc", team: "Ferrari", points: 356 }
+];
+const constructorsStandings = [
+{ position: 1, team: "McLaren", points: 666 },
+{ position: 2, team: "Ferrari", points: 652 },
+{ position: 3, team: "Red Bull Racing", points: 589 }
+];
+const driversTable = document.getElementById("drivers-standings");
+const constructorsTable = document.getElementById("constructors-standings");
+driversStandings.forEach(driver => {
+driversTable.innerHTML += `
+<tr>
+<td>${driver.position}</td>
+<td>${driver.driver}</td>
+<td>${driver.team}</td>
+<td>${driver.points}</td>
+</tr>
+`;
+});
+constructorsStandings.forEach(team => {
+constructorsTable.innerHTML += `
+<tr>
+<td>${team.position}</td>
+<td>${team.team}</td>
+<td>${team.points}</td>
+</tr>
+`;
+});
+});
+</script>
+</head>
+<body>
+<header>
+<h1 class="site-title">The DRS Zone</h1>
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="fixtures 1.html">Race Locations</a></li>
+<li><a href="contact 1.html">Contact</a></li>
+</ul>
+</nav>
+</header>
+<main>
+<section id="welcome">
+<div class="welcome-box">
+<h1>Welcome to The DRS Zone</h1>
+<p>Stay tuned for all the latest news, updates, and highlights from the world of Formula 1!</p>
+</div>
+</section>
+<section id="standings-container">
+<div class="standings-box">
+<h2>2024 Final Season Standings</h2>
+<div class="tables-container">
+<div class="table-wrapper">
+<h3>Drivers' Championship</h3>
+<table>
+<thead>
+<tr>
+<th>Pos</th>
+<th>Driver</th>
+<th>Team</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody id="drivers-standings"></tbody>
+</table>
+</div>
+<div class="table-wrapper">
+<h3>Constructors' Championship</h3>
+<table>
+<thead>
+<tr>
+<th>Pos</th>
+<th>Team</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody id="constructors-standings"></tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="videos-section">
+<h2>Race Highlights</h2>
+<div class="video-container">
+<div class="video-box">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/P0CCVelbhxs" 
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div class="video-box">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lSFMxhvioxw" 
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<p>&copy; 2024 The DRS Zone. All rights reserved.</p>
+</footer>
+</body>
+</html>
